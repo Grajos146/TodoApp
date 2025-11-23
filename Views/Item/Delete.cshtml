@@ -1,0 +1,21 @@
+﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model TodoApp.Models.TodoItem
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div>
+<div class = "card p-4 mb-4 index shadow-sm rounded index mx-auto">
+    <h3>Are you sure you want to delete this item?</h3>
+    <h4>@Model.Title</h4>
+    @* <p>@Model.Description</p> *@
+    @* <p>Status: @(Model.IsCompleted ? "Completed" : "Pending")</p> *@
+    @* <p>Created At: @Model.CreatedAt?.ToString("g")</p>
+    <p>Updated At: @Model.UpdatedAt?.ToString("g")</p> *@
+</div>
+<form asp-action="Delete" asp-route-id="@Model.Id" asp-method="POST">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+</div>

@@ -1,0 +1,23 @@
+@model TodoApp.Models.TodoItem
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h3>Edit To-Do Item</h3>
+<form asp-action="Edit" asp-method="POST">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" asp-for="Title" />
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" asp-for="Description" />
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" asp-for="IsCompleted" />
+        <label class="form-check-label" for="IsCompleted">Completed</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
