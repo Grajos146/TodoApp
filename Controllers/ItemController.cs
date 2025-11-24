@@ -26,6 +26,7 @@ namespace TodoApp.Controllers
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
+
             var items = await _context.TodoItems.Where(u => u.UserId == userId).ToListAsync();
             if (items == null || items.Count == 0)
             {

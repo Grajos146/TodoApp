@@ -1,7 +1,35 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="">    
-    <a asp-controller="Item" asp-action="Index" class="text-danger btn btn-success text-light">Go To My To-Do List</a>.</p>
-</div>
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="text-center mt-5">
+        <span class="text-dark">Hello, @UserManager.GetUserName(User)!</span>
+        <div class="mx-auto mt-3">    
+            <a asp-controller="Item" asp-action="Index" class="text-light btn btn-success">Go To My To-Do List</a>
+        </div>
+        
+        </div>
+}
+else
+{
+    <div class="text-center">
+      <h1>Welcome to Your To-Do App</h1>
+        <p>Stay organized, focused, and on top of your tasks. Let's get things done!</p>
+    </div>
+
+    <div class="d-flex flex-column align-items-center" style="margin-top:10rem;">
+        <a class="text-dark btn btn-success auth mb-3" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        <a class="text-dark btn btn-secondary auth" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </div>
+}
+
+

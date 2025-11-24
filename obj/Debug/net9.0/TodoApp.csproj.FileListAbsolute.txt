@@ -207,7 +207,6 @@ C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\refint\TodoApp.dll
 C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\TodoApp.pdb
 C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\TodoApp.genruntimeconfig.cache
 C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\ref\TodoApp.dll
-C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\compressed\egenlg8pe6-qkn9sooqja.gz
 C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\TodoApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\USER\Desktop\Todo\TodoApp\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\USER\Desktop\Todo\TodoApp\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.UI.dll
@@ -392,3 +391,5 @@ C:\Users\USER\Desktop\Todo\TodoApp\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Sc
 C:\Users\USER\Desktop\Todo\TodoApp\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\USER\Desktop\Todo\TodoApp\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\USER\Desktop\Todo\TodoApp\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\TodoApp.sourcelink.json
+C:\Users\USER\Desktop\Todo\TodoApp\obj\Debug\net9.0\compressed\egenlg8pe6-mnhoxovvw1.gz

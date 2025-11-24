@@ -31,7 +31,7 @@ body {
 }
 
 body {
-  background-color: rgba(208, 79, 79, 0.788);
+  background-color: rgba(206, 182, 182, 0.959);
 }
 
 .index {
@@ -50,4 +50,32 @@ th, td{
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   color: #fff !important;
 }
+
+.area {
+  width: 30rem;
+  margin-top: 2rem;
+  background: rgba(206, 182, 182, 0.56) !important;
+border-radius: 16px!important;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5)!important;
+backdrop-filter: blur(10.3px)!important;
+-webkit-backdrop-filter: blur(10.3px)!important;
+border: 1px solid rgba(208, 79, 79, 0.7)!important;
+}
+
+.area hr {
+  border-top: 2px solid #fff;
+}
+
+.auth {
+  color: #fff !important;
+  width: 50%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+span.text-dark {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
 
