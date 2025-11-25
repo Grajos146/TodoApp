@@ -4,20 +4,38 @@
     ViewData["Title"] = "Edit";
 }
 
-<h3>Edit To-Do Item</h3>
+<div class ="card mx-auto p-3 area edit">
+<h3 class="mb-3">Edit To-Do Item</h3>
 <form asp-action="Edit" asp-method="POST">
     <input type="hidden" asp-for="Id" />
-    <div class="form-group">
+    <div class="form-group  mb-3">
         <label for="Title">Title</label>
         <input type="text" class="form-control" asp-for="Title" />
     </div>
-    <div class="form-group">
+    <div class="form-group mb-3">
         <label for="Description">Description</label>
         <input type="text" class="form-control" asp-for="Description" />
     </div>
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" asp-for="IsCompleted" />
-        <label class="form-check-label" for="IsCompleted">Completed</label>
+        <label class="form-check-label mb-2" for="IsCompleted">Completed</label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="d-flex mt-3 justify-content-between">
+    <a asp-action="Index" class="btn btn-secondary"><span class="material-icons">arrow_back</span></i></a>
+    <button type="submit" id = "editBtn" class="btn btn-primary">Submit</button>
+    </div>
 </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $('form').on('submit', function(event) {
+        const submitBtn = $('#editBtn');
+        submitBtn.prop('disabled', true);
+        submitBtn.html('<span class="spinner-border spinner-border-sm" aria-hidden="true"></span>');
+        })
+    </script>
+
+}

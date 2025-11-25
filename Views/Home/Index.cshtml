@@ -7,11 +7,9 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-
 @if (SignInManager.IsSignedIn(User))
 {
-    <div class="text-center mt-5">
+    <div class="text-center username">
         <span class="text-dark">Hello, @UserManager.GetUserName(User)!</span>
         <div class="mx-auto mt-3">    
             <a asp-controller="Item" asp-action="Index" class="text-light btn btn-success">Go To My To-Do List</a>
@@ -31,5 +29,3 @@ else
         <a class="text-dark btn btn-secondary auth" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </div>
 }
-
-
