@@ -6,13 +6,20 @@
 @if (SignInManager.IsSignedIn(User))
 {
     var userName = UserManager.GetUserName(User);
-    var firstLetter = !String.IsNullOrEmpty(userName) ? userName.Substring(0, 1).ToUpper() : "?"; 
+    var firstLetter = !String.IsNullOrEmpty(userName) ? userName.Substring(0, 1).ToUpper() : "?";
+    
+    string[] colors = {"#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF", "#FFC0CB", "#800000", "#808000", "#008000", "#800080", "#008080", "#808080"};
+
+    var colorIndex = !String.IsNullOrEmpty(userName) ? Math.Abs(userName.GetHashCode()) % colors.Length : 0;
+    var color = colors[colorIndex];
+
+
 
     <li class="nav-item">
     <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
 
-        <div class="rounded-circle bg-secondary text-white d-flex justify-content-center align-items-center shadow-sm" 
-                 style="width: 35px; height: 35px; font-weight: bold;">
+        <div class="rounded-circle text-white d-flex justify-content-center align-items-center shadow-sm" 
+                 style="width: 35px; height: 35px; font-weight: bold; background-color: @color">
                 @firstLetter
             </div>
     </a>
